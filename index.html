@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>C-Lingo · 关务AI辅助系统 | Product Prototype</title>
+  <meta name="description" content="C-Lingo 是一款面向关务行业的 AI 辅助系统，集智能翻译、AI 咨询、术语库与记忆库管理于一体的专业平台。" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <!-- 背景光效 -->
+  <div class="bg-glow">
+    <div class="glow glow-1"></div>
+    <div class="glow glow-2"></div>
+    <div class="glow glow-3"></div>
+  </div>
+
+  <!-- 导航栏 -->
+  <nav class="nav">
+    <div class="nav-inner">
+      <div class="nav-logo">
+        <span class="logo-mark">C</span>
+        <span class="logo-text">C-Lingo</span>
+      </div>
+      <div class="nav-links">
+        <a href="#overview" class="nav-link">概述</a>
+        <a href="#features" class="nav-link">功能</a>
+        <a href="#gallery" class="nav-link">界面</a>
+        <a href="#admin" class="nav-link">管理后台</a>
+        <a href="#design" class="nav-link">设计</a>
+      </div>
+      <a href="prototype/index.html" class="nav-cta" target="_blank">
+        进入原型
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="M5 12h14M12 5l7 7-7 7"/>
+        </svg>
+      </a>
+    </div>
+  </nav>
+
+  <!-- Hero 首屏 -->
+  <section class="hero">
+    <div class="hero-inner">
+      <div class="hero-left">
+        <div class="hero-tag">
+          <span class="dot"></span>
+          PRODUCT PROTOTYPE · 2024
+        </div>
+        <h1 class="hero-title">
+          <span class="title-line">C-Lingo</span>
+          <span class="title-sub">关务<span class="accent">AI</span>辅助系统</span>
+        </h1>
+        <p class="hero-desc">
+          让跨境贸易语言不再是障碍。<br/>
+          智能翻译 · AI 咨询 · 术语记忆，一体化关务专业平台。
+        </p>
+        <div class="hero-actions">
+          <a href="prototype/index.html" class="btn btn-primary" target="_blank">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M5 3l14 9-14 9V3z"/>
+            </svg>
+            查看交互原型
+          </a>
+          <a href="#overview" class="btn btn-ghost">
+            了解更多
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M12 5v14M5 12l7 7 7-7"/>
+            </svg>
+          </a>
+        </div>
+        <div class="hero-stats">
+          <div class="stat">
+            <div class="stat-num">8+</div>
+            <div class="stat-label">功能模块</div>
+          </div>
+          <div class="stat-divider"></div>
+          <div class="stat">
+            <div class="stat-num">10万+</div>
+            <div class="stat-label">专业术语</div>
+          </div>
+          <div class="stat-divider"></div>
+          <div class="stat">
+            <div class="stat-num">99.2%</div>
+            <div class="stat-label">翻译准确率</div>
+          </div>
+        </div>
+      </div>
+      <div class="hero-right">
+        <div class="hero-mockup">
+          <div class="mockup-window">
+            <div class="mockup-header">
+              <div class="mockup-dots">
+                <span class="dot dot-red"></span>
+                <span class="dot dot-yellow"></span>
+                <span class="dot dot-green"></span>
+              </div>
+              <div class="mockup-url">c-lingo.app / 智能咨询</div>
+            </div>
+            <div class="mockup-body">
+              <img src="images/screenshot-consult.jpg" alt="C-Lingo AI咨询界面" />
+            </div>
+          </div>
+          <div class="mockup-glow"></div>
+        </div>
+      </div>
+    </div>
+    <div class="scroll-hint">
+      <span>向下滚动</span>
+      <div class="scroll-line"></div>
+    </div>
+  </section>
+
+  <!-- Overview 项目背景 -->
+  <section class="section overview" id="overview">
+    <div class="section-inner">
+      <div class="section-header reveal">
+        <span class="section-num">01</span>
+        <h2 class="section-title">为什么做 C-Lingo</h2>
+      </div>
+      <div class="overview-content">
+        <div class="overview-text reveal">
+          <p>
+            关务行业涉及大量专业术语、法规标准和进出口文档，传统翻译工具难以满足行业精准度要求。
+            报关员、单证员在日常工作中频繁面临<strong class="text-accent">术语不统一、翻译效率低、标准难查找</strong>等痛点。
+          </p>
+          <p>
+            C-Lingo 正是为解决这一问题而生——它不是又一个通用翻译工具，而是深度聚焦关务场景的 AI 辅助平台。
+            通过整合专业语料库、术语库与大语言模型，为关务从业者提供<strong class="text-accent">精准、可溯源、高效率</strong>的智能服务。
+          </p>
+        </div>
+        <div class="overview-cards reveal">
+          <div class="ov-card">
+            <div class="ov-icon">🎯</div>
+            <h3>精准</h3>
+            <p>基于关务专业语料训练，翻译准确率远超通用工具</p>
+          </div>
+          <div class="ov-card">
+            <div class="ov-icon">⚡</div>
+            <h3>高效</h3>
+            <p>翻译记忆+术语库双引擎，重复内容零成本复用</p>
+          </div>
+          <div class="ov-card">
+            <div class="ov-icon">🔍</div>
+            <h3>可溯源</h3>
+            <p>所有 AI 输出均关联标准依据，支持溯源查证</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Features 核心功能 -->
+  <section class="section features" id="features">
+    <div class="section-inner">
+      <div class="section-header reveal">
+        <span class="section-num">02</span>
+        <h2 class="section-title">核心功能模块</h2>
+        <p class="section-desc">覆盖关务工作全场景，从翻译到咨询，从个人使用到企业管理</p>
+      </div>
+      <div class="features-grid">
+        <div class="feature-card reveal">
+          <div class="feature-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+              <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/>
+            </svg>
+          </div>
+          <h3 class="feature-title">AI 智能咨询</h3>
+          <p class="feature-desc">24 小时关务顾问，秒级解答进出口政策、商品归类、报关流程等专业问题，所有回答均附标准依据</p>
+          <div class="feature-tags">
+            <span>智能问答</span>
+            <span>标准溯源</span>
+            <span>多轮对话</span>
+          </div>
+        </div>
+
+        <div class="feature-card reveal">
+          <div class="feature-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+              <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
+              <polyline points="14 2 14 8 20 8"/>
+              <line x1="8" y1="13" x2="16" y2="13"/>
+              <line x1="8" y1="17" x2="14" y2="17"/>
+            </svg>
+          </div>
+          <h3 class="feature-title">文档翻译</h3>
+          <p class="feature-desc">支持 PDF / Word / Excel 等多格式专业文档翻译，智能保留排版格式，术语自动匹配企业词库</p>
+          <div class="feature-tags">
+            <span>多格式</span>
+            <span>保留排版</span>
+            <span>批量处理</span>
+          </div>
+        </div>
+
+        <div class="feature-card reveal">
+          <div class="feature-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+              <path d="M4 7V4h16v3"/>
+              <path d="M9 20h6"/>
+              <path d="M12 4v16"/>
+            </svg>
+          </div>
+          <h3 class="feature-title">文本翻译</h3>
+          <p class="feature-desc">即输即译的轻量翻译工具，支持中英双向互译，内置关务专业术语引擎，翻译结果实时润色</p>
+          <div class="feature-tags">
+            <span>即输即译</span>
+            <span>中英双向</span>
+            <span>术语引擎</span>
+          </div>
+        </div>
+
+        <div class="feature-card reveal">
+          <div class="feature-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+              <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/>
+              <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/>
+            </svg>
+          </div>
+          <h3 class="feature-title">术语库管理</h3>
+          <p class="feature-desc">自定义企业级术语库，支持批量导入导出，统一翻译口径，团队协作更高效，越用越精准</p>
+          <div class="feature-tags">
+            <span>企业级</span>
+            <span>批量导入</span>
+            <span>团队协作</span>
+          </div>
+        </div>
+
+        <div class="feature-card reveal">
+          <div class="feature-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+              <path d="M9.5 2A2.5 2.5 0 0 1 12 4.5v15a2.5 2.5 0 0 1-4.96.44 2.5 2.5 0 0 1-2.96-3.08 3 3 0 0 1-.34-5.58 2.5 2.5 0 0 1 1.32-4.24 2.5 2.5 0 0 1 4.44-2.04z"/>
+              <path d="M14.5 2A2.5 2.5 0 0 0 12 4.5v15a2.5 2.5 0 0 0 4.96.44 2.5 2.5 0 0 0 2.96-3.08 3 3 0 0 0 .34-5.58 2.5 2.5 0 0 0-1.32-4.24 2.5 2.5 0 0 0-4.44-2.04z"/>
+            </svg>
+          </div>
+          <h3 class="feature-title">翻译记忆库</h3>
+          <p class="feature-desc">历史翻译内容自动记忆存储，相似内容智能推荐复用，大幅降低重复翻译成本，提升团队效率</p>
+          <div class="feature-tags">
+            <span>自动记忆</span>
+            <span>智能匹配</span>
+            <span>复用推荐</span>
+          </div>
+        </div>
+
+        <div class="feature-card reveal">
+          <div class="feature-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+              <circle cx="12" cy="12" r="10"/>
+              <polyline points="12 6 12 12 16 14"/>
+            </svg>
+          </div>
+          <h3 class="feature-title">翻译历史</h3>
+          <p class="feature-desc">完整记录所有翻译轨迹，支持按时间、类型、关键词多维搜索回溯，一键查看详情与批量导出</p>
+          <div class="feature-tags">
+            <span>完整记录</span>
+            <span>多维搜索</span>
+            <span>批量导出</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Gallery 界面展示 -->
+  <section class="section gallery" id="gallery">
+    <div class="section-inner">
+      <div class="section-header reveal">
+        <span class="section-num">03</span>
+        <h2 class="section-title">界面一览</h2>
+        <p class="section-desc">清晰的信息架构，专业的视觉语言，让复杂关务工作变得简单</p>
+      </div>
+      <div class="gallery-showcase reveal">
+        <div class="gallery-main">
+          <div class="gallery-window">
+            <div class="gallery-window-header">
+              <div class="gallery-dots">
+                <span></span><span></span><span></span>
+              </div>
+              <div class="gallery-tab active" data-img="images/screenshot-consult.jpg">智能咨询</div>
+              <div class="gallery-tab" data-img="images/screenshot-translate.jpg">文档翻译</div>
+              <div class="gallery-tab" data-img="images/screenshot-text-translate.jpg">文本翻译</div>
+              <div class="gallery-tab" data-img="images/screenshot-admin.jpg">管理后台</div>
+            </div>
+            <div class="gallery-window-body">
+              <img id="gallery-main-img" src="images/screenshot-consult.jpg" alt="界面预览" />
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="gallery-thumbs reveal">
+        <div class="thumb active" data-img="images/screenshot-consult.jpg">
+          <img src="images/screenshot-consult.jpg" alt="智能咨询" />
+          <span>AI 咨询</span>
+        </div>
+        <div class="thumb" data-img="images/screenshot-translate.jpg">
+          <img src="images/screenshot-translate.jpg" alt="文档翻译" />
+          <span>文档翻译</span>
+        </div>
+        <div class="thumb" data-img="images/screenshot-glossary.jpg">
+          <img src="images/screenshot-glossary.jpg" alt="术语库" />
+          <span>术语库</span>
+        </div>
+        <div class="thumb" data-img="images/screenshot-memory.jpg">
+          <img src="images/screenshot-memory.jpg" alt="记忆库" />
+          <span>记忆库</span>
+        </div>
+        <div class="thumb" data-img="images/screenshot-admin.jpg">
+          <img src="images/screenshot-admin.jpg" alt="管理后台" />
+          <span>管理后台</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Admin 管理后台 -->
+  <section class="section admin-section" id="admin">
+    <div class="section-inner">
+      <div class="admin-content">
+        <div class="admin-text reveal">
+          <span class="section-num">04</span>
+          <h2 class="section-title">企业级管理后台</h2>
+          <p class="section-desc">完善的后台管理能力，满足企业级部署与团队协作需求</p>
+          <ul class="admin-features">
+            <li>
+              <span class="check-icon">✓</span>
+              <div>
+                <strong>用户与角色管理</strong>
+                <p>灵活的权限体系，支持多角色、多部门分级管理</p>
+              </div>
+            </li>
+            <li>
+              <span class="check-icon">✓</span>
+              <div>
+                <strong>语料库与标准管理</strong>
+                <p>统一管理企业语料资源和行业标准，持续优化模型效果</p>
+              </div>
+            </li>
+            <li>
+              <span class="check-icon">✓</span>
+              <div>
+                <strong>模型配置</strong>
+                <p>支持多模型切换与参数调优，按需匹配不同业务场景</p>
+              </div>
+            </li>
+            <li>
+              <span class="check-icon">✓</span>
+              <div>
+                <strong>数据统计与分析</strong>
+                <p>使用数据可视化看板，洞察团队效率与系统表现</p>
+              </div>
+            </li>
+          </ul>
+        </div>
+        <div class="admin-mockup reveal">
+          <div class="admin-screen">
+            <img src="images/screenshot-admin.jpg" alt="管理后台界面" />
+          </div>
+          <div class="admin-glow"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Design Notes 设计说明 -->
+  <section class="section design" id="design">
+    <div class="section-inner">
+      <div class="section-header reveal">
+        <span class="section-num">05</span>
+        <h2 class="section-title">设计理念</h2>
+        <p class="section-desc">以专业为底色，以效率为目标，打造值得信赖的关务 AI 工具</p>
+      </div>
+      <div class="design-grid">
+        <div class="design-card reveal">
+          <div class="design-num">01</div>
+          <h3>专业导向</h3>
+          <p>深度贴合关务行业场景，不是通用 AI 工具的简单套壳。从术语体系到工作流，全部围绕关务人员真实需求设计。</p>
+        </div>
+        <div class="design-card reveal">
+          <div class="design-num">02</div>
+          <h3>效率优先</h3>
+          <p>减少操作路径，核心功能 3 步触达。翻译记忆、术语推荐、批量处理，每一个设计决策都以"省时间"为衡量标准。</p>
+        </div>
+        <div class="design-card reveal">
+          <div class="design-num">03</div>
+          <h3>视觉统一</h3>
+          <p>蓝色主调传递专业与可信，界面模块化降低认知成本。在复杂功能与简洁体验之间，找到恰到好处的平衡点。</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA / Footer -->
+  <section class="section cta-section">
+    <div class="section-inner">
+      <div class="cta-box reveal">
+        <h2 class="cta-title">感兴趣？来试试交互原型吧</h2>
+        <p class="cta-desc">完整功能原型已上线，体验 C-Lingo 的每一个细节</p>
+        <a href="prototype/index.html" class="btn btn-primary btn-large" target="_blank">
+          进入原型
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M5 12h14M12 5l7 7-7 7"/>
+          </svg>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="footer-inner">
+      <div class="footer-left">
+        <div class="footer-logo">
+          <span class="logo-mark">C</span>
+          <span class="logo-text">C-Lingo</span>
+        </div>
+        <p>关务 AI 辅助系统 · 产品原型</p>
+      </div>
+      <div class="footer-right">
+        <span>Designed & Built with ♥</span>
+        <span>2024</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

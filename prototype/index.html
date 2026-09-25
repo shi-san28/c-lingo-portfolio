@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>C-Lingo 关务AI辅助系统</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/app.css">
+    <style>
+      /* 加载失败提示样式（独立于app样式） */
+      #fallback-tip {
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: #0a0e1a;
+        color: #f1f5f9;
+        font-family: 'IBM Plex Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+        justify-content: center;
+        align-items: center;
+        z-index: 9999;
+        padding: 20px;
+      }
+      #fallback-tip.show {
+        display: flex;
+      }
+      .fallback-box {
+        max-width: 520px;
+        text-align: center;
+        padding: 48px 40px;
+        background: #1e293b;
+        border: 1px solid rgba(59, 130, 246, 0.3);
+        border-radius: 16px;
+      }
+      .fallback-icon {
+        font-size: 48px;
+        margin-bottom: 20px;
+      }
+      .fallback-title {
+        font-size: 22px;
+        font-weight: 600;
+        margin-bottom: 12px;
+        color: #f1f5f9;
+      }
+      .fallback-desc {
+        font-size: 14px;
+        color: #94a3b8;
+        line-height: 1.7;
+        margin-bottom: 24px;
+      }
+      .fallback-code {
+        display: block;
+        padding: 12px 16px;
+        background: #0f172a;
+        border: 1px solid #334155;
+        border-radius: 8px;
+        font-family: 'JetBrains Mono', monospace;
+        font-size: 13px;
+        color: #60a5fa;
+        margin: 12px 0;
+        text-align: left;
+      }
+      .fallback-note {
+        font-size: 12px;
+        color: #64748b;
+        margin-top: 16px;
+      }
+      /* 加载中动画 */
+      #loading-spinner {
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        z-index: 9998;
+        text-align: center;
+        color: #94a3b8;
+        font-family: 'IBM Plex Sans', sans-serif;
+        font-size: 14px;
+      }
+      #loading-spinner.hidden {
+        display: none;
+      }
+      .spinner-ring {
+        width: 36px;
+        height: 36px;
+        border: 3px solid rgba(59, 130, 246, 0.2);
+        border-top-color: #3b82f6;
+        border-radius: 50%;
+        animation: spin 0.8s linear infinite;
+        margin: 0 auto 12px;
+      }
+      @keyframes spin {
+        to { transform: rotate(360deg); }
+      }
+    </style>
+  </head>
+  <body>
+    <div id="app"></div>
+
+    <!-- 加载中提示 -->
+    <div id="loading-spinner">
+      <div class="spinner-ring"></div>
+      <span>加载中...</span>
+    </div>
+
+    <!-- 加载失败友好提示 -->
+    <div id="fallback-tip">
+      <div class="fallback-box">
+        <div class="fallback-icon">⚠️</div>
+        <div class="fallback-title">原型加载失败</div>
+        <div class="fallback-desc">
+            原型加载失败，可能是浏览器安全限制或网络问题导致。<br/>
+            请尝试通过 HTTP 服务器方式访问，或刷新页面重试。
+          </div>
+          <div style="text-align: left; font-size: 13px; color: #cbd5e1;">
+            <strong>推荐方式（在项目根目录运行）：</strong>
+            <code class="fallback-code">python3 -m http.server 8080</code>
+            <code class="fallback-code">npx serve .</code>
+            然后在浏览器中访问 <strong style="color:#60a5fa;">http://localhost:8080/prototype/</strong>
+          </div>
+        <div class="fallback-note">
+          💡 部署到 GitHub Pages 后可直接访问，无需本地服务器
+        </div>
+      </div>
+    </div>
+
+    <script src="js/app.js"></script>
+    <script>
+      // 检测加载状态：如果 5 秒后 #app 仍然是空的，说明 JS 加载失败
+      (function() {
+        var app = document.getElementById('app');
+        var spinner = document.getElementById('loading-spinner');
+        var fallback = document.getElementById('fallback-tip');
+
+        // 等待加载，5秒后检查（无论是 file:// 还是 http:// 都等一等）
+        var checkTimer = setTimeout(function() {
+          if (!app.innerHTML || app.innerHTML.trim().length < 20) {
+            spinner.classList.add('hidden');
+            fallback.classList.add('show');
+          }
+        }, 5000);
+
+        // 如果 app 有内容了，清除 loading
+        function checkLoaded() {
+          if (app.innerHTML && app.innerHTML.trim().length > 20) {
+            spinner.classList.add('hidden');
+            clearTimeout(checkTimer);
+          } else {
+            requestAnimationFrame(checkLoaded);
+          }
+        }
+        requestAnimationFrame(checkLoaded);
+      })();
+    </script>
+  </body>
+</html>
