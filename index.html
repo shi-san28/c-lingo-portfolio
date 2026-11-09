@@ -149,6 +149,7 @@
     margin:24px auto 0;
     font-size:clamp(30px,4.2vw,54px);
     line-height:1.24;font-weight:500;letter-spacing:-.025em;
+    text-wrap:balance;
   }
   .lede{
     margin:28px auto 0;max-width:660px;
@@ -322,6 +323,11 @@
   @media (max-width:900px){
     .cap-list{grid-template-columns:1fr;gap:0}
   }
+  /* 窄屏下 13 字的标题会断在「服务」中间，改为「一站式关务翻译 / 大模型服务平台」 */
+  .br-m{display:none}
+  @media (max-width:440px){
+    .br-m{display:inline}
+  }
   @media (max-width:760px){
     .nav-links > a:not(.nav-cta){display:none}
     .win-side{display:none}
@@ -365,7 +371,7 @@
         可交互原型<span class="tag-sub"> · 用户端 + 管理后台</span>
       </span>
 
-      <h1 class="rise d1">关务翻译与咨询，<br>一个入口做完</h1>
+      <h1 class="rise d1">C-Lingo——<br>一站式关务翻译<br class="br-m">大模型服务平台</h1>
 
       <p class="lede rise d2">
         从政策问答、单证翻译到术语统一，<br>
