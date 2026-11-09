@@ -151,6 +151,7 @@
     line-height:1.24;font-weight:500;letter-spacing:-.025em;
     text-wrap:balance;
   }
+  .h1-a,.h1-b{display:block}
   .lede{
     margin:28px auto 0;max-width:660px;
     font-size:16px;line-height:1.85;color:var(--ink-2);
@@ -305,6 +306,8 @@
   /* ============ 入场动效 ============ */
   @media (prefers-reduced-motion:no-preference){
     .rise{animation:rise 320ms cubic-bezier(.2,.7,.2,1) both}
+    .h1-a{animation:fadein 420ms cubic-bezier(.2,.7,.2,1) 60ms both}
+    .h1-b{animation:fadein 420ms cubic-bezier(.2,.7,.2,1) 220ms both}
     .d1{animation-delay:60ms}
     .d2{animation-delay:120ms}
     .d3{animation-delay:180ms}
@@ -312,6 +315,10 @@
     @keyframes rise{
       from{opacity:0;transform:translateY(8px)}
       to{opacity:1;transform:none}
+    }
+    @keyframes fadein{
+      from{opacity:0}
+      to{opacity:1}
     }
   }
   @media (prefers-reduced-motion:reduce){
@@ -322,11 +329,6 @@
   /* ============ 响应式 ============ */
   @media (max-width:900px){
     .cap-list{grid-template-columns:1fr;gap:0}
-  }
-  /* 窄屏下 13 字的标题会断在「服务」中间，改为「一站式关务翻译 / 大模型服务平台」 */
-  .br-m{display:none}
-  @media (max-width:440px){
-    .br-m{display:inline}
   }
   @media (max-width:760px){
     .nav-links > a:not(.nav-cta){display:none}
@@ -371,7 +373,7 @@
         可交互原型<span class="tag-sub"> · 用户端 + 管理后台</span>
       </span>
 
-      <h1 class="rise d1">C-Lingo——<br>一站式关务翻译<br class="br-m">大模型服务平台</h1>
+      <h1 class="rise d1"><span class="h1-a">C-Lingo</span><span class="h1-b">关务翻译大模型服务平台</span></h1>
 
       <p class="lede rise d2">
         从政策问答、单证翻译到术语统一，<br>
