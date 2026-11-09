@@ -52,7 +52,7 @@ C-Lingo 是一款面向关务行业的 AI 辅助系统产品原型。针对关�
 - **字体**：IBM Plex Sans / Playfair Display / JetBrains Mono
 - **构建产物**：单文件打包（inlined assets）
 
-> 本仓库为原型构建产物与作品集落地页的静态展示版本。
+> 本仓库为 C-Lingo 关务 AI 辅助系统的原型引导页与可交互原型的静态展示版本。
 
 ---
 
@@ -60,35 +60,24 @@ C-Lingo 是一款面向关务行业的 AI 辅助系统产品原型。针对关�
 
 ```
 c-lingo-portfolio/
-├── index.html              # 项目落地页（作品集首页）
-├── css/
-│   └── style.css           # 落地页样式
-├── js/
-│   └── main.js             # 落地页交互逻辑
-├── images/                 # 落地页与 README 用截图
-│   ├── screenshot-login.jpg
-│   ├── screenshot-consult.jpg
-│   ├── screenshot-translate.jpg
-│   ├── screenshot-text-translate.jpg
-│   ├── screenshot-glossary.jpg
-│   ├── screenshot-memory.jpg
-│   ├── screenshot-history.jpg
-│   └── screenshot-admin.jpg
+├── index.html              # 原型引导页（单文件，内联 CSS/SVG/JS，无外部依赖）
 ├── prototype/              # 产品原型（拆分后）
 │   ├── index.html          # 原型入口
 │   ├── css/
 │   │   └── app.css         # 原型样式
 │   ├── js/
-│   │   └── app.js          # 原型主脚本（ES Module）
+│   │   └── app.js          # 原型主脚本
 │   └── assets/images/      # 原型静态资源
 └── README.md               # 项目说明文档
 ```
+
+> 首页 `index.html` 是原型引导页：内联样式与脚本、无外部字体/图片请求，双击即可打开；粒子层为纯装饰，关闭 JavaScript 后页面依然完整可读。
 
 ---
 
 ## 🚀 本地运行
 
-由于原型使用了 ES Module (`type="module"`)，需要通过 HTTP 服务器访问，不能直接双击打开 HTML 文件。
+由于原型的资源已从单文件构建产物中拆分出来，建议通过 HTTP 服务器访问，确保所有页面与图片都能正常加载。
 
 ### 方式一：Python（推荐，无需安装）
 
@@ -138,10 +127,11 @@ npx http-server . -p 8080
 
 | 颜色  | 色值                    | 用途           |
 | --- | --------------------- | ------------ |
-| 主色调 | `#3b82f6`             | 品牌色、主按钮、重点强调 |
-| 辅助色 | `#8b5cf6`             | 渐变点缀、装饰元素    |
-| 背景色 | `#0a0e1a` / `#0f172a` | 深色背景层级       |
-| 文字色 | `#f1f5f9` / `#94a3b8` | 主文字 / 次要文字   |
+| 页面底色 | `#f5f6f8` / `#eef1f5` | 首屏 / 第二屏背景   |
+| 主文字 | `#0e1319`             | 标题与正文        |
+| 次级文字 | `#5b6472`             | 段落           |
+| 三级文字 | `#68707d`             | 注释与元信息       |
+| 强调色 | `#3d4ce0`             | 状态点、重点词下划线   |
 
 ---
 
